@@ -51,9 +51,10 @@ class Select extends React.Component {
                 elm.item(i).checked = e.target.checked;
             }
             if (e.target.checked == true) {
+                
                 this.state.options.forEach(item => {
                     allSelected.push(item.value);
-                })
+                })    
                 this.setState({
                     selected: allSelected,
                     changeSelectAllBtn: 'deselect all'
@@ -65,7 +66,7 @@ class Select extends React.Component {
                     selected: []
                 })
             }
-                this.props.onSelect(allSelected);
+             this.props.onSelect(allSelected);
         }
 
 
@@ -81,7 +82,6 @@ class Select extends React.Component {
                         this.checkAll
                     }
                     />
-
                     <
                     label className = "select-all-label"
                     htmlFor = "select-all" > {
@@ -108,7 +108,7 @@ class Select extends React.Component {
         return l.label.toLowerCase().match( searchString );
        });
       }
-    return (<div>
+    return (<div className="grow">
       <input className="search  tField"  type = "text" value = {this.state.searchString} onChange = {this.handleSearchChange} placeholder = "Search" />
         {options.map((l,index) => {
           return  <div className="row" key={index}>
@@ -121,14 +121,17 @@ class Select extends React.Component {
                     value={l.value}
                     onChange={this.handleOnChange}
                   />
-                  <label htmlFor={index}>{l.label}</label>
+       <label htmlFor={index}>{l.label}</label>
             </div>  
            </div>
         })}
+       <div className="spacer"></div>
        <div className="reset">  {this.renderCheckAll()} </div>
+      
       </div>);
 }
 }
 
 
 export default Select;
+
