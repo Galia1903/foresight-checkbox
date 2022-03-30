@@ -171,6 +171,10 @@ label:hover{
   opacity:100%;
 }
 
+#select-all{
+  display: none;
+}
+
 .select-all-label{
   color: #53a6fc !important;
   font-size: 10px;
