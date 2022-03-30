@@ -45,12 +45,12 @@ class Select extends React.Component {
 
 
         checkAll(e) {
+            const allSelected = [];
             let elm = document.querySelectorAll('.check');
             for (let i = 0; i < elm.length; i++) {
                 elm.item(i).checked = e.target.checked;
             }
             if (e.target.checked == true) {
-                const allSelected = [];
                 this.state.options.forEach(item => {
                     allSelected.push(item.value);
                 })
@@ -64,6 +64,7 @@ class Select extends React.Component {
                     changeSelectAllBtn: 'select all'
                 })
             }
+                this.props.onSelect(allSelected);
         }
 
 
@@ -74,6 +75,7 @@ class Select extends React.Component {
                     <
                     input className = "select-all"
                     type = "checkbox"
+                    id="select-all"
                     onChange = {
                         this.checkAll
                     }
