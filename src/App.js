@@ -7,11 +7,23 @@ class App extends React.Component {
             super(props);
             this.state = {
                 options: [{
-                    label: 'option1',
-                    value: 1
+                    label: 'image',
+                    value: 'image'
                 }, {
-                    label: 'option2',
-                    value: 2
+                    label: 'live',
+                    value: 'live'
+                }, {
+                    label: 'notes',
+                    value: 'notes'
+                }, {
+                    label: 'presentation',
+                    value: 'presentetion'
+                }, {
+                    label: 'report',
+                    value: 'report'
+                }, {
+                    label: 'video',
+                    value: 'video'
                 }],
                 multiChoice: true,
                 name: '',
