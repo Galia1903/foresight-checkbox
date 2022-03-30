@@ -98,8 +98,10 @@ class App extends React.Component {
          onChecked = {this.getChecked}
          ref={this.childRef}
          />
-      <div className="line"></div>
-      <input className="btn" type="submit" value="Submit" />
+     <div className="end">
+        <div className="line"></div>
+        <input className="btn" type="submit" value="Submit" />
+      </div>
    </form>
 </div>
   );
