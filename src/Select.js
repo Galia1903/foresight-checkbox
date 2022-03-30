@@ -61,7 +61,8 @@ class Select extends React.Component {
             }
             if (e.target.checked == false) {
                 this.setState({
-                    changeSelectAllBtn: 'select all'
+                    changeSelectAllBtn: 'select all',
+                    selected: []
                 })
             }
                 this.props.onSelect(allSelected);
